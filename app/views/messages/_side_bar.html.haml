@@ -1,0 +1,11 @@
+.side
+  .side__top
+    .side__top__user
+      name
+      .side__top__user__icon
+        = link_to "#", class: "side__top__user__icon__edit" do
+          = icon('fas', 'edit')
+        = link_to "#", class: "side__top__user__icon__cog" do
+          = icon('fas', 'cog')
+
+  .side__contents
