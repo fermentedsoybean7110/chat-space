@@ -18,6 +18,7 @@
     &__user {
       color: #ffffff;
       font-size: 16px;
+      font-weight: bold;
       width: 260px;
       height: 20px;
       display: flex;
@@ -44,6 +45,31 @@
   &__contents {
     background-color: #2f3e51;
     height: calc(100vh - 100px);
+    position: absolute;
+    &__group {
+      width: 300px;
+      height: 105px;
+      position: absolute;
+      &__name {
+        width: 260px;
+        height: 20px;
+        font-size: 15px;
+        line-height: 20px;
+        position: relative;
+        top: 20px;
+        margin: 0 20px;
+        color: #ffffff;
+      }
+      &__text {
+        width: 260px;
+        height: 20px;
+        font-size: 11px;
+        line-height: 20px;
+        position: relative;
+        margin: 27px 20px;
+        color: #ffffff;
+      }
+    }
   }
 }
 
@@ -55,6 +81,38 @@
     background-color: #ffffff;
     height: 100px;
     border-bottom: 10px #eeeeee;
+    display: flex;
+    justify-content: space-between;
+    &__info {
+      width: 100px;
+      margin-left: 40px;
+      &__name {
+        height: 25px;
+        color: #333333;
+        margin-top: 35px;
+        font-size: 20px;
+
+      }
+      &__members {
+        height: 25px;
+        margin-top: 15px;
+        color: #999999;
+        font-size: 12px;
+        line-height: 28px;
+      }
+    }
+    &__edit {
+      font-size: 16px;
+      text-decoration: none;
+      width: 72px;
+      height: 40px;
+      color: #38aef0;
+      border: 1px solid #38aef0;
+      line-height: 40px;
+      text-align: center;
+      margin: 30px 40px 0 0;
+
+    }
   }
   &__contents {
     background-color: #fafafa;
