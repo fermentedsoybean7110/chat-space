@@ -24,5 +24,11 @@
           2020/03/26(Thu) 19:01:00
       .main__contents__text__sentence
         aaa
-  .main__message
-    適当
+  .main__submit
+    .main__submit__message
+      %input.main__submit__message__word{:name => "type a message", :type => "text", :placeholder => "type a message"}
+      %label.main__submit__message__picture
+        = icon('far', 'image')
+        %input.main__submit__message__picture__select{type: "file"}
+    .main__submit__send
+      Send
