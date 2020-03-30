@@ -9,8 +9,10 @@
           = icon('fas', 'cog')
 
   .side__contents
-    .side__contents_group
-      .side__contents__group__name
-        aaaa
-      .side__contents__group__text
-        まだメッセージがありません
+    - current_user.groups.each do |group|
+      .side__contents__group
+        = link_to '#' do
+          .side__contents__group__name
+            = group.name
+          .side__contents__group__text
+            メッセージはまだありません。
