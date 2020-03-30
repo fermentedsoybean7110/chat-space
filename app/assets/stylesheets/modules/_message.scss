@@ -16,7 +16,7 @@
     justify-content: center;
     align-items: center;
     &__user {
-      @include group();
+      @include rfc1();
       font-size: 16px;
       font-weight: bold;
       display: flex;
@@ -45,18 +45,15 @@
     &__group {
       width: 300px;
       height: 105px;
-      position: absolute;
+      padding: 20px 20px 0;
       &__name {
-        @include group();
-        position: relative;
-        top: 20px;
-        margin-left: 20px;
+        @include rfc1();
+        font-size: 15px;
+        margin-bottom: 5px;
       }
       &__text {
-        @include group();
-        position: relative;
+        @include rfc1();
         font-size: 11px;
-        margin: 27px 20px;
       }
     }
   }
