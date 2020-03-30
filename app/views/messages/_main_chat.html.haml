@@ -8,27 +8,13 @@
     = link_to "#", class: "main__top__edit" do
       Edit
   .main__contents
-    .main__contents__text
-      .main__contents__text__subjects
-        .main__contents__text__subjects__title
-          asdf
-        .main__contents__text__subjects__date
-          2020/03/26(Thu) 19:01:00
-      .main__contents__text__sentence
-        試し
-    .main__contents__text
-      .main__contents__text__subjects
-        .main__contents__text__subjects__title
-          dddd
-        .main__contents__text__subjects__date
-          2020/03/26(Thu) 19:01:00
-      .main__contents__text__sentence
-        aaa
+    = render @messages
+    
   .main__submit
-    .main__submit__message
-      %input.main__submit__message__word{name: "type a message", type: "text", placeholder: "type a message"}
-      %label.main__submit__message__picture
-        = icon('far', 'image')
-        %input.main__submit__message__picture__select{type: "file"}
-    .main__submit__send
-      Send
+    = form_for [@group, @message] do |f|
+      = f.text_field :content, class: 'main__submit__message', placeholder: 'type a message'
+      .form__mask
+        = f.label :image, class: 'form__mask__image' do
+          = icon('fas', 'image', class: 'icon')
+          = f.file_field :image, class: 'hidden'
+      = f.submit 'Send', class: 'form__submit'

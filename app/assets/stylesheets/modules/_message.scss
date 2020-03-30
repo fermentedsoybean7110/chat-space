@@ -152,12 +152,12 @@
         border-style: none;
         padding-left: 10px;
       }
-      &__picture {
+      &form__mask__image {
         font-size: 25px;
         position: absolute;
         right: 10px;
         cursor: pointer;
-        &__select {
+        &__hidden {
           display: none;
         }
       }
