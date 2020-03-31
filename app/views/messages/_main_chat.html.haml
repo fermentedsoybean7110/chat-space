@@ -2,19 +2,21 @@
   .main__top
     .main__top__info
       .main__top__info__name
-        group
+        = @group.name
       .main__top__info__members
         Member：
-    = link_to "#", class: "main__top__edit" do
+        - @members.each do |member|
+          = member.name
+    = link_to edit_group_path(@group), class: "main__top__edit" do
       Edit
   .main__contents
     = render @messages
     
   .main__submit
     = form_for [@group, @message] do |f|
-      = f.text_field :content, class: 'main__submit__message', placeholder: 'type a message'
-      .form__mask
-        = f.label :image, class: 'form__mask__image' do
-          = icon('fas', 'image', class: 'icon')
-          = f.file_field :image, class: 'hidden'
-      = f.submit 'Send', class: 'form__submit'
+      .main__submit__message
+        = f.text_field :content, class: 'main__submit__message__form', placeholder: 'type a message'
+        = f.label :image, class: 'main__submit__message__image' do
+          = icon('fas', 'image', class: 'main__submit__message__image__icon')
+          = f.file_field :image, class: 'main__submit__message__image__hidden'
+          = f.submit 'Send', class: 'main__submit__send'
