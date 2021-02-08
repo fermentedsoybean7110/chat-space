@@ -60,7 +60,7 @@ gem "haml-rails"
 gem 'font-awesome-sass'
 gem 'devise'
 gem 'pry-rails'
-gem 'carrierwave', '~> 2.0'
+gem 'carrierwave', '~> 2.1'
 gem 'mini_magick'
 group :production do
   gem 'unicorn', '5.4.1'
